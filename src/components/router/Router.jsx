@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Home } from '../Home';
 import { Page1 } from '../Page1';
 import { Page2 } from '../Page2';
+import { Page404 } from '../Page404';
 import { UrlParameter } from '../UrlParameter';
 import { page1Routes } from './Page1Routes';
 
@@ -17,6 +18,7 @@ export const Router = () => {
             <Route path='Page2' element={<Page2 />}>
                 <Route path=':id' element={<UrlParameter />} />
             </Route>
+            <Route path='*' element={<Page404 />} />
         </Routes>
     )
 }
